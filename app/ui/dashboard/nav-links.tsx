@@ -4,6 +4,7 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,11 +19,11 @@ const links = [
     icon: DocumentDuplicateIcon,
   },
   { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
+  { name: "Deutch", href: "/dashboard/deutch", icon: GlobeAltIcon },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
-  console.log("Current pathname:", pathname);
   return (
     <>
       {links.map((link) => {
